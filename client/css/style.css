@@ -1,0 +1,242 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/* ===========================
+   CSS VARIABLES
+=========================== */
+
+:root{
+
+    --primary:#5865F2;
+    --primary-hover:#4752C4;
+
+    --background:#1e1f22;
+    --card:#313338;
+    --card-light:#383A40;
+
+    --border:#3f4147;
+
+    --text:#F2F3F5;
+    --text-light:#DBDEE1;
+    --muted:#B5BAC1;
+
+    --success:#23A559;
+    --danger:#ED4245;
+    --warning:#FAA81A;
+
+    --shadow:0 20px 45px rgba(0,0,0,.45);
+
+    --radius:12px;
+
+}
+
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#1e1f22;
+
+    color:var(--text);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    transition:.25s;
+
+}
+
+a:hover{
+
+    color:#7b86ff;
+
+}
+
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+/* ===========================
+   INPUTS
+=========================== */
+
+input,
+select,
+button,
+textarea{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 10% 20%,rgba(122,92,255,.25),transparent 25%),
+
+    radial-gradient(circle at 80% 15%,rgba(52,102,255,.35),transparent 30%),
+
+    radial-gradient(circle at 70% 80%,rgba(88,101,242,.18),transparent 28%),
+
+    linear-gradient(135deg,#22085c 0%,#1d2fa5 55%,#3277ff 100%);
+
+    z-index:-3;
+
+}
+
+
+/* ===========================
+   FLOATING PARTICLES
+=========================== */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(white 2px,transparent 2px),
+
+    radial-gradient(#7d7dff 2px,transparent 2px),
+
+    radial-gradient(#9f7fff 2px,transparent 2px);
+
+    background-size:
+
+    180px 180px,
+
+    260px 260px,
+
+    320px 320px;
+
+    opacity:.18;
+
+    animation:floatBackground 35s linear infinite;
+
+    z-index:-2;
+
+}
+
+@keyframes floatBackground{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-180px);
+
+    }
+
+}
+
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+
+/* ===========================
+   UTILITIES
+=========================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:10px;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:30px;
+
+}
+
+.hidden{
+
+    display:none;
+
+}

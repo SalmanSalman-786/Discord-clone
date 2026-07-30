@@ -1,0 +1,481 @@
+/* ===========================
+   CARD
+=========================== */
+
+.card {
+  background: rgba(49, 51, 56, 0.96);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.25s;
+}
+
+.btn-primary {
+  background: var(--primary);
+
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ===========================
+   INPUT GROUP
+=========================== */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--text-light);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+.input {
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 16px;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border);
+
+  background: #1e1f22;
+
+  color: white;
+
+  font-size: 15px;
+
+  transition: 0.25s;
+}
+
+.input:focus {
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.25);
+}
+
+.input.valid{
+
+    border-color:var(--success);
+
+    box-shadow:0 0 0 3px rgba(35,165,89,.2);
+
+}
+
+.input.invalid{
+
+    border-color:var(--danger);
+
+    box-shadow:0 0 0 3px rgba(237,66,69,.2);
+
+}
+
+/* ===========================
+   PASSWORD WRAPPER
+=========================== */
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.password-wrapper .password-toggle {
+
+    position: absolute;
+
+    top: 50%;
+    right: 12px;
+
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #b5bac1;
+    font-size: 18px;
+
+    z-index: 100;
+
+    padding: 0;
+    margin: 0;
+}
+
+.password-wrapper .password-toggle:hover {
+    color: white;
+}
+/* ===========================
+   ERROR
+=========================== */
+
+.error {
+  color: var(--danger);
+
+  font-size: 13px;
+
+  margin-top: 6px;
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+.loader {
+  width: 18px;
+
+  height: 18px;
+
+  border: 3px solid rgba(255, 255, 255, 0.2);
+
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================
+   AVATAR
+=========================== */
+
+.avatar {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+.toast-container {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.toast {
+  width: min(340px, 90vw);
+  background: #313338;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+
+  animation: toastIn 0.35s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.toast-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 18px;
+}
+
+.toast-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  color: white;
+}
+
+.toast-success .toast-icon {
+  background: var(--success);
+}
+
+.toast-error .toast-icon {
+  background: var(--danger);
+}
+
+.toast-warning .toast-icon {
+  background: var(--warning);
+}
+
+.toast-info .toast-icon {
+  background: var(--primary);
+}
+
+.toast-content h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.toast-content p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.toast-progress {
+  height: 4px;
+  background: var(--primary);
+
+  animation: progress 4s linear forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===========================
+   LOADING OVERLAY
+=========================== */
+
+.loading-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.55);
+
+    backdrop-filter: blur(6px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 10000;
+
+}
+
+.loading-overlay.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.loading-box {
+
+    width: 260px;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background: rgba(49,51,56,.95);
+
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow: var(--shadow);
+
+}
+
+.loading-spinner {
+
+    width: 45px;
+
+    height: 45px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    border: 4px solid rgba(255,255,255,.15);
+
+    border-top-color: var(--primary);
+
+    animation: spin .8s linear infinite;
+
+}
+
+.loading-text {
+
+    margin-top: 18px;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+}
+
+/* ===========================
+   MODAL
+=========================== */
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: 0.3s;
+}
+
+.modal.show {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+/* ===========================
+   DROPDOWN
+=========================== */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+
+  top: 110%;
+
+  left: 0;
+
+  width: 220px;
+
+  background: #313338;
+
+  border-radius: 12px;
+
+  padding: 10px;
+
+  box-shadow: var(--shadow);
+
+  display: none;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
