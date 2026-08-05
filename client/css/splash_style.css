@@ -1,0 +1,85 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: radial-gradient(ellipse at top, #2b2560 0%, #0f0c29 60%, #3a3563 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    position: relative;
+    overflow-y: scroll;
+  }
+
+  .stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+      radial-gradient(2px 2px at 140px 80px, #fff, transparent),
+      radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+      radial-gradient(1px 1px at 250px 120px, #fff, transparent),
+      radial-gradient(2px 2px at 320px 60px, #fff, transparent),
+      radial-gradient(1px 1px at 400px 200px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 420px 220px;
+    opacity: 0.6;
+    animation: twinkle 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes twinkle {
+    from { opacity: 0.3; }
+    to   { opacity: 0.9;  }
+  }
+
+  .navbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 20px;
+  }
+
+
+
+
+  .open-btn {
+    background: #ffffff;
+        top: 20px;
+    right: 20px;
+    color: #05040d;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 24px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    position: fixed;
+  }
+
+  .hero {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    padding: 20px 48px 80px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 5rem);
+    line-height: 0.91;
+    font-family: Archivo Black;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  p {
+    font-size: 1.15rem;
+    font-family: Geomini;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #dcdce8;
+    max-width: 480px;
+  }
