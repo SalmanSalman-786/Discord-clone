@@ -73,6 +73,7 @@ body{
 
     flex:1;
     overflow:auto;
+    background:#1e1f22;
 
 }
 
@@ -90,12 +91,7 @@ body{
 
 }
 
-.tabs{
 
-    display:flex;
-    gap:12px;
-
-}
 
 .tabs button{
 
@@ -148,26 +144,32 @@ body{
 /* HERO */
 
 .hero{
-    height:220px;
+    height:240px;
+    margin:30px;
     padding:45px 60px;
+    border-radius:18px;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
-    background:linear-gradient(135deg,#3b4ca8,#25255d);
+
+    background:linear-gradient(135deg,#3b2f7d,#5865F2,#7b61ff);
 }
+
 .hero h1{
-
-    font-size:62px;
-    line-height:70px;
-    font-weight:800;
-
+    font-family:'League Spartan',sans-serif;
+    font-size:72px;
+    font-weight:900;
+    letter-spacing:-3px;
+    color:white;
 }
 
 .hero p{
-    margin-top:16px;
+    margin-top:10px;
     font-size:18px;
-    color:#c5cad3;
-    font-weight:500;
+    color:#d8d9e4;
+    max-width:550px;
+    line-height:1.5;
 }
 
 /* SECTION */
@@ -186,13 +188,14 @@ section h2{
 
 /* GRID */
 
-.card-grid{
+.card-grid,
+.server-grid{
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
 
-    gap:22px;
+gap:18px;
 
 }
 
@@ -272,32 +275,43 @@ a{
 }
 .discover-card{
 
-    width:300px;
     background:#232428;
-    border:1px solid #383a40;
-    border-radius:12px;
+    border:1px solid #3c3f46;
+    border-radius:14px;
+
     overflow:hidden;
 
-    transition:.25s ease;
-
     cursor:pointer;
+
+    transition:.25s ease;
 
 }
 
 .discover-card:hover{
 
     transform:translateY(-6px);
-    border-color:#5a5d65;
-    box-shadow:0 10px 25px rgba(0,0,0,.45);
+
+    border-color:#5865F2;
+
+    box-shadow:0 14px 30px rgba(0,0,0,.45);
 
 }
 
 .banner{
 
-    width:100%;
-    height:170px;
+width:100%;
 
-    object-fit:cover;
+height:150px;
+
+object-fit:cover;
+
+transition:.35s;
+
+}
+
+.discover-card:hover .banner{
+
+transform:scale(1.05);
 
 }
 
@@ -311,20 +325,20 @@ a{
 
 .icon{
 
-    width:52px;
-    height:52px;
+width:54px;
+height:54px;
 
-    border-radius:12px;
+border-radius:14px;
 
-    position:absolute;
+border:4px solid #232428;
 
-    top:-26px;
+position:absolute;
 
-    left:18px;
+top:-27px;
 
-    border:4px solid #232428;
+left:20px;
 
-    background:white;
+background:white;
 
 }
 
@@ -360,18 +374,15 @@ a{
 
 .description{
 
-    margin-top:12px;
+margin-top:10px;
 
-    color:#d5d7dc;
+font-size:15px;
 
-    font-size:15px;
+color:#b8bcc6;
 
-    line-height:1.4;
+line-height:1.45;
 
-    display:-webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
+min-height:60px;
 
 }
 .card-grid{
@@ -396,3 +407,242 @@ a{
     transition:.35s ease;
 
 }
+/* ==========================
+   SERVER HERO
+========================== */
+
+
+.game-section{
+
+    padding:20px 30px 40px;
+
+}
+
+.game-section h2{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    color:white;
+
+}
+.server-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+
+    gap:18px;
+
+}
+.server-card{
+
+    background:#232428;
+
+    border:1px solid #3c3f46;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    transition:.25s ease;
+
+    cursor:pointer;
+
+}
+.server-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#5865F2;
+
+    box-shadow:0 14px 30px rgba(0,0,0,.45);
+
+}
+
+.server-card:hover .server-banner{
+
+    transform:scale(1.05);
+
+}
+
+.server-banner{
+
+    width:100%;
+
+    height:150px;
+
+    object-fit:cover;
+
+    transition:.35s;
+
+}
+
+.server-content{
+
+    position:relative;
+
+    padding:20px;
+
+}
+
+.server-icon{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:14px;
+
+    border:4px solid #232428;
+
+    position:absolute;
+
+    top:-27px;
+
+    left:20px;
+
+    background:#fff;
+
+}
+
+.server-content h3{
+
+    margin-top:32px;
+
+    font-size:21px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.server-description{
+
+    margin-top:10px;
+
+    color:#b8bcc6;
+
+    line-height:1.45;
+
+    font-size:15px;
+
+    min-height:60px;
+
+}
+
+.server-stats{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:18px;
+
+    font-size:13px;
+
+    color:#a8acb5;
+
+}
+
+.online{
+
+    color:#43b581;
+
+}
+.top-nav input{
+
+    width:280px;
+
+    background:#111214;
+
+    color:white;
+
+    border:none;
+
+    outline:none;
+
+    padding:12px 16px;
+
+    border-radius:8px;
+
+    transition:.25s;
+
+}
+
+.top-nav input:focus{
+
+    box-shadow:0 0 0 2px #5865F2;
+
+}
+
+
+
+.tabs button{
+
+    background:transparent;
+
+    border:none;
+
+    color:#b5bac1;
+
+    padding:10px 16px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.tabs button:hover{
+
+    background:#2b2d31;
+
+    color:white;
+
+}
+
+.tabs .active{
+
+    background:#5865F2;
+
+    color:white;
+
+}
+
+@media(max-width:900px){
+
+.server-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero.gaming{
+
+padding:30px;
+
+height:200px;
+
+}
+
+.hero.gaming h1{
+
+font-size:48px;
+
+}
+
+.tabs{
+
+overflow:auto;
+
+}
+
+}
+
