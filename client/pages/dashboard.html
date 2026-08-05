@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <head>
   <meta charset="UTF-8">
@@ -209,4 +210,87 @@
 });
 </script>
 
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+
+    <style>
+        body{
+            margin:0;
+            font-family:Inter,sans-serif;
+            background:#1e1f22;
+            color:white;
+        }
+
+        .dashboard{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .card{
+            width:420px;
+            padding:40px;
+            text-align:center;
+        }
+
+        h1{
+            margin-bottom:12px;
+        }
+
+        p{
+            color:#B5BAC1;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="card">
+
+        <h1>Dashboard</h1>
+
+        <p>You are successfully logged in.</p>
+
+        <button class="btn btn-primary" id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/auth/auth.js"></script>
+
+<script>
+
+if(!isLoggedIn()){
+    window.location.href="auth/login.html";
+}
+
+document.getElementById("logoutBtn").addEventListener("click",()=>{
+
+    removeTokens();
+
+    window.location.href="auth/login.html";
+
+});
+
+</script>
+
+</body>
+>>>>>>> d6838f2 (Complete Discord login page UI)
 </html>

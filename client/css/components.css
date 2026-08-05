@@ -1,49 +1,52 @@
-/* ===========================
+/* ==========================================================
    CARD
-=========================== */
+========================================================== */
 
 .card {
-  background: rgba(49, 51, 56, 0.96);
-
-  backdrop-filter: blur(18px);
-
-  border: 1px solid rgba(255, 255, 255, 0.05);
-
-  border-radius: 18px;
-
-  box-shadow: var(--shadow);
+  background: #313338;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
 }
 
-/* ===========================
-   BUTTONS
-=========================== */
+/* ==========================================================
+   BUTTON
+========================================================== */
 
 .btn {
   width: 100%;
 
-  height: 48px;
+  height: 44px;
 
   border: none;
 
-  border-radius: 10px;
+  outline: none;
+
+  border-radius: 8px;
 
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
 
   font-size: 15px;
 
   font-weight: 600;
 
-  transition: 0.25s;
+  transition: background-color 0.17s ease;
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: #5865f2;
 
   color: white;
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
+  background: #4752c4;
 }
 
 .btn-primary:active {
@@ -51,17 +54,19 @@
 }
 
 .btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    pointer-events: none;
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  pointer-events: none;
 }
 
-/* ===========================
-   INPUT GROUP
-=========================== */
+/* ==========================================================
+   FORM GROUP
+========================================================== */
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .form-group label {
@@ -69,137 +74,150 @@
 
   margin-bottom: 8px;
 
-  color: var(--text-light);
-
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
 
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+
+  color: #B5BAC1;
 }
 
-/* ===========================
+/* ==========================================================
    INPUT
-=========================== */
+========================================================== */
 
 .input {
   width: 100%;
 
-  height: 48px;
+  height: 44px;
 
   padding: 0 16px;
 
-  border-radius: 10px;
-
-  border: 1px solid var(--border);
-
   background: #1e1f22;
 
-  color: white;
+  border: 1px solid #1e1f22;
+
+  border-radius: 8px;
+
+  color: #f2f3f5;
 
   font-size: 15px;
 
-  transition: 0.25s;
+  transition: 0.2s;
+}
+
+.input::placeholder {
+  color: #87898c;
+}
+
+.input:hover {
+  border-color: #404249;
 }
 
 .input:focus {
-  border-color: var(--primary);
+  border-color: #5865f2;
 
-  box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.25);
+  box-shadow: none;
 }
 
-.input.valid{
+/* ==========================================================
+   VALIDATION
+========================================================== */
 
-    border-color:var(--success);
+.input.valid {
+  border-color: #23a559;
 
-    box-shadow:0 0 0 3px rgba(35,165,89,.2);
-
+  box-shadow: 0 0 0 2px rgba(35, 165, 89, 0.2);
 }
 
-.input.invalid{
+.input.invalid {
+  border-color: #ed4245;
 
-    border-color:var(--danger);
-
-    box-shadow:0 0 0 3px rgba(237,66,69,.2);
-
+  box-shadow: 0 0 0 2px rgba(237, 66, 69, 0.2);
 }
 
-/* ===========================
-   PASSWORD WRAPPER
-=========================== */
+/* ==========================================================
+   PASSWORD
+========================================================== */
 
 .password-wrapper {
-    position: relative;
-    width: 100%;
+  position: relative;
 }
 
-.password-wrapper input {
-    width: 100%;
-    padding-right: 50px;
+.password-wrapper .input {
+  padding-right: 48px;
 }
 
-.password-wrapper .password-toggle {
+.password-toggle {
+  position: absolute;
 
-    position: absolute;
+  top: 50%;
 
-    top: 50%;
-    right: 12px;
+  right: 14px;
 
-    transform: translateY(-50%);
+  transform: translateY(-50%);
 
-    width: 34px;
-    height: 34px;
+  width: 24px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 24px;
 
-    border: none;
-    outline: none;
-    background: transparent;
+  border: none;
 
-    cursor: pointer;
+  background: none;
+  color: #949ba4;
 
-    color: #b5bac1;
-    font-size: 18px;
+  cursor: pointer;
 
-    z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    padding: 0;
-    margin: 0;
+  font-size: 20px;
+
+  transition: 0.2s;
 }
 
-.password-wrapper .password-toggle:hover {
-    color: white;
+.password-toggle:hover {
+  color: white;
 }
-/* ===========================
+
+/* ==========================================================
    ERROR
-=========================== */
+========================================================== */
 
 .error {
-  color: var(--danger);
-
-  font-size: 13px;
+  display: block;
 
   margin-top: 6px;
+
+  min-height: 16px;
+
+  font-size: 12px;
+
+  color: #ed4245;
 }
 
-/* ===========================
+/* ==========================================================
    LOADER
-=========================== */
+========================================================== */
 
 .loader {
   width: 18px;
 
   height: 18px;
 
-  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  border: 3px solid rgba(255, 255, 255, 0.25);
 
   border-top-color: white;
 
-  border-radius: 50%;
-
   animation: spin 0.8s linear infinite;
+}
+
+.hidden {
+  display: none !important;
 }
 
 @keyframes spin {
@@ -208,14 +226,14 @@
   }
 }
 
-/* ===========================
+/* ==========================================================
    AVATAR
-=========================== */
+========================================================== */
 
 .avatar {
-  width: 42px;
+  width: 40px;
 
-  height: 42px;
+  height: 40px;
 
   border-radius: 50%;
 
@@ -230,84 +248,100 @@
   object-fit: cover;
 }
 
-/* ===========================
+/* ==========================================================
    TOAST
-=========================== */
+========================================================== */
 
 .toast-container {
   position: fixed;
-  top: 25px;
-  right: 25px;
+
+  top: 20px;
+
+  right: 20px;
+
   display: flex;
+
   flex-direction: column;
-  gap: 15px;
+
+  gap: 14px;
+
   z-index: 9999;
 }
 
 .toast {
-  width: min(340px, 90vw);
-  background: #313338;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
+  width: 340px;
 
-  animation: toastIn 0.35s ease;
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+  background: #313338;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  animation: toastIn 0.3s ease;
 }
 
 .toast-header {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
 
-  padding: 15px 18px;
+  padding: 12px;
 }
 
 .toast-icon {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+
+  height: 38px;
 
   border-radius: 50%;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
-  font-size: 18px;
   color: white;
+
+  font-weight: bold;
 }
 
 .toast-success .toast-icon {
-  background: var(--success);
+  background: #23a559;
 }
 
 .toast-error .toast-icon {
-  background: var(--danger);
+  background: #ed4245;
 }
 
 .toast-warning .toast-icon {
-  background: var(--warning);
+  background: #faa81a;
 }
 
 .toast-info .toast-icon {
-  background: var(--primary);
+  background: #5865f2;
 }
 
 .toast-content h4 {
   font-size: 15px;
-  margin-bottom: 4px;
+
+  margin-bottom: 3px;
 }
 
 .toast-content p {
-  color: var(--muted);
+  color: #b5bac1;
+
   font-size: 13px;
 }
 
 .toast-progress {
   height: 4px;
-  background: var(--primary);
+
+  background: #5865f2;
 
   animation: progress 4s linear forwards;
 }
@@ -318,109 +352,95 @@
   }
 
   to {
-    width: 0%;
+    width: 0;
   }
 }
 
 @keyframes toastIn {
   from {
     opacity: 0;
+
     transform: translateX(100%);
   }
 
   to {
     opacity: 1;
+
     transform: translateX(0);
   }
 }
 
-/* ===========================
+/* ==========================================================
    LOADING OVERLAY
-=========================== */
+========================================================== */
 
 .loading-overlay {
+  position: fixed;
 
-    position: fixed;
+  inset: 0;
 
-    inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 
-    background: rgba(0,0,0,.55);
+  backdrop-filter: blur(5px);
 
-    backdrop-filter: blur(6px);
+  display: flex;
 
-    display: flex;
+  justify-content: center;
 
-    justify-content: center;
+  align-items: center;
 
-    align-items: center;
+  opacity: 0;
 
-    opacity: 0;
+  visibility: hidden;
 
-    visibility: hidden;
+  transition: 0.25s;
 
-    transition: .3s;
-
-    z-index: 10000;
-
+  z-index: 10000;
 }
 
 .loading-overlay.show {
+  opacity: 1;
 
-    opacity: 1;
-
-    visibility: visible;
-
+  visibility: visible;
 }
 
 .loading-box {
+  width: 250px;
 
-    width: 260px;
+  padding: 28px;
 
-    padding: 30px;
+  background: #313338;
 
-    border-radius: 18px;
+  border-radius: 16px;
 
-    background: rgba(49,51,56,.95);
-
-    text-align: center;
-
-    border: 1px solid rgba(255,255,255,.08);
-
-    box-shadow: var(--shadow);
-
+  text-align: center;
 }
 
 .loading-spinner {
+  width: 42px;
 
-    width: 45px;
+  height: 42px;
 
-    height: 45px;
+  margin: auto;
 
-    margin: auto;
+  border-radius: 50%;
 
-    border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.15);
 
-    border: 4px solid rgba(255,255,255,.15);
+  border-top-color: #5865f2;
 
-    border-top-color: var(--primary);
-
-    animation: spin .8s linear infinite;
-
+  animation: spin 0.8s linear infinite;
 }
 
 .loading-text {
+  margin-top: 16px;
 
-    margin-top: 18px;
-
-    color: var(--text);
-
-    font-size: 15px;
-
+  font-size: 15px;
 }
 
-/* ===========================
+/* ==========================================================
    MODAL
-=========================== */
+========================================================== */
 
 .modal {
   position: fixed;
@@ -431,15 +451,15 @@
 
   display: flex;
 
-  align-items: center;
-
   justify-content: center;
+
+  align-items: center;
 
   opacity: 0;
 
   visibility: hidden;
 
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .modal.show {
@@ -448,9 +468,9 @@
   visibility: visible;
 }
 
-/* ===========================
+/* ==========================================================
    DROPDOWN
-=========================== */
+========================================================== */
 
 .dropdown {
   position: relative;
@@ -467,13 +487,13 @@
 
   background: #313338;
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   padding: 10px;
 
-  box-shadow: var(--shadow);
-
   display: none;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .dropdown.open .dropdown-menu {

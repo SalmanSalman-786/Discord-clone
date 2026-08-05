@@ -1,302 +1,366 @@
-/* ==========================================
+/* ==========================================================
    LOGIN PAGE
-========================================== */
+========================================================== */
 
 .login-page {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 32px;
+
+  background: url("../assets/images/login-bg.png") center center / cover
+    no-repeat;
 }
 
-
-/* ==========================================
+/* ==========================================================
    LOGIN CARD
-========================================== */
+========================================================== */
 
 .login-card {
-    width: 100%;
-    max-width: 980px;
-    display: flex;
-    overflow: hidden;
-    border-radius: 20px;
+  width: 784px;
+
+  height: auto;
+  min-height: 520px;
+
+  display: flex;
+
+  background: rgba(49, 51, 56, 0.95);
+
+  backdrop-filter: blur(16px);
+
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+
+  animation: cardIn 0.45s ease;
 }
 
-
-/* ==========================================
+/* ==========================================================
    LEFT PANEL
-========================================== */
+========================================================== */
 
 .login-left {
-    flex: 1.1;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  padding: 40px;
 }
 
+/* ==========================================================
+   LOGO
+========================================================== */
+
 .logo {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 25px;
+  width: 120px;
+
+  margin: 0 auto 28px;
 }
 
 .logo img {
-    width: 100%;
+  width: 100%;
+
+  display: block;
 }
+
+/* ==========================================================
+   TITLE
+========================================================== */
 
 .login-left h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 10px;
+  font-size: 24px;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  margin-bottom: 8px;
 }
+
+/* ==========================================================
+   SUBTITLE
+========================================================== */
 
 .subtitle {
-    color: var(--muted);
-    margin-bottom: 35px;
-    font-size: .95rem;
+  text-align: center;
+  font-size: 16px;
+  color: #b5bac1;
+
+  max-width: 320px;
+  margin: 0 auto 20px;
 }
 
+/* ==========================================================
+   FORM
+========================================================== */
+
+#loginForm {
+  width: 100%;
+
+  max-width: 416px;
+
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 20px;
+}
 .forgot-password {
-    margin-top: -8px;
-    margin-bottom: 22px;
+  margin-top: 4px;
+
+  margin-bottom: 20px;
 }
 
 .forgot-password a {
-    font-size: .9rem;
+  font-size: 14px;
+
+  color: #00a8fc;
+
+  text-decoration: none;
 }
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+
+  color: #b5bac1;
+
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   LOGIN BUTTON
+========================================================== */
 
 .login-btn {
-    margin-top: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
+  width: 100%;
+
+  height: 44px;
+
+  margin-top: 0;
+
+  border-radius: 8px;
 }
 
+.login-btn:hover {
+  transform: none;
+}
+
+/* ==========================================================
+   REGISTER
+========================================================== */
+
 .register-text {
-    margin-top: 28px;
-    text-align: center;
-    color: var(--muted);
+  margin-top: 16px;
+
+  font-size: 14px;
+
+  color: #72767d;
+
+  text-align: left;
 }
 
 .register-text a {
-    font-weight: 600;
+  color: #00a8fc;
+
+  font-weight: 400;
 }
 
+.register-text a:hover {
+  text-decoration: underline;
+}
 
-/* ==========================================
+/* ==========================================================
    RIGHT PANEL
-========================================== */
+========================================================== */
 
 .login-right {
-    width: 360px;
-    background: rgba(255,255,255,.03);
-    border-left: 1px solid rgba(255,255,255,.05);
+  width: 240px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex-shrink: 0;
 
-    padding: 40px;
-    text-align: center;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 32px;
+
+  background: #2b2d31;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
 }
+/* ==========================================================
+   QR BOX
+========================================================== */
 
 .qr-box {
-    width: 190px;
-    height: 190px;
+  width: 176px;
 
-    background: white;
+  height: 176px;
 
-    border-radius: 18px;
+  background: white;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border-radius: 4px;
 
-    padding: 14px;
+  padding: 10px;
 
-    margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .qr-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
 }
 
 .login-right h2 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-}
+  font-size: 24px;
 
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
 .login-right p {
-    color: var(--muted);
-    line-height: 1.6;
-    font-size: .95rem;
+  max-width: 240px;
+
+  font-size: 16px;
+
+  line-height: 20px;
+
+  color: #b5bac1;
 }
 
+/* ==========================================================
+   INPUT EFFECTS
+========================================================== */
 
-/* ==========================================
-   INPUT ANIMATION
-========================================== */
+.input {
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s,
+    background 0.25s;
+}
 
 .input:hover {
-    border-color: #5d67f8;
+  border-color: #404249;
 }
 
 .input::placeholder {
-    color: #888;
+  color: #72767d;
+}
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+  .login-card {
+    width: 95%;
+
+    height: auto;
+
+    flex-direction: column;
+  }
+
+  .login-right {
+    width: 100%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
 }
 
+@media (max-width: 600px) {
+  .login-page {
+    padding: 20px;
+  }
 
-/* ==========================================
-   CARD ANIMATION
-========================================== */
+  .login-left {
+    padding: 30px 24px;
+  }
 
-.login-card {
-    animation: cardIn .7s ease;
+  .login-right {
+    padding: 28px 24px;
+  }
+
+  .logo {
+    width: 110px;
+    margin: 0 auto 28px;
+  }
+
+  .login-left h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .qr-box {
+    width: 176px;
+
+    height: 176px;
+
+    padding: 8px;
+
+    border-radius: 4px;
+
+    background: white;
+
+    margin-bottom: 32px;
+  }
 }
+
+@media (max-width: 420px) {
+  .login-card {
+    border-radius: 14px;
+  }
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
 
 @keyframes cardIn {
+  from {
+    opacity: 0;
 
-    from {
-        opacity: 0;
-        transform: translateY(35px);
-    }
+    transform: translateY(30px) scale(0.96);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
 
-}
-
-
-/* ==========================================
-   BUTTON HOVER
-========================================== */
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(88,101,242,.35);
-}
-
-
-/* ==========================================
-   LOGO ANIMATION
-========================================== */
-
-.logo {
-    animation: floatLogo 4s ease-in-out infinite;
-}
-
-@keyframes floatLogo {
-
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-8px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-
-}
-
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-
-@media (max-width:900px){
-
-    .login-card{
-
-        flex-direction:column;
-
-        max-width:500px;
-
-    }
-
-    .login-right{
-
-        width:100%;
-
-        border-left:none;
-
-        border-top:1px solid rgba(255,255,255,.05);
-
-    }
-
-}
-
-@media (max-width:600px){
-
-    .login-left{
-
-        padding:35px 25px;
-
-    }
-
-    .login-right{
-
-        padding:30px 25px;
-
-    }
-
-    .login-left h1{
-
-        font-size:1.7rem;
-
-    }
-
-    .qr-box{
-
-        width:160px;
-
-        height:160px;
-
-    }
-
-}
-
-@media (max-width:420px){
-
-    .login-page{
-
-        padding:15px;
-
-    }
-
-    .login-card{
-
-        border-radius:16px;
-
-    }
-
-    .login-left{
-
-        padding:28px 20px;
-
-    }
-
-}
-
-
-/* ==========================================
-   loading
-========================================== */
-
-.loading-overlay {
-    display: none;
-}
-
-.loading-overlay.show {
-    display: flex;
+    transform: translateY(0) scale(1);
+  }
 }

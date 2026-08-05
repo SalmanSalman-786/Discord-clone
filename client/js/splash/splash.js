@@ -1,7 +1,7 @@
-
-function navigateToLoginPage(){
-    window.location.href="../../pages/auth/login.html";
+function navigateToLoginPage() {
+    window.location.href = "../auth/login.html";
 }
 
-let discord_btn= document.getElementById("open_btn")
-discord_btn.addEventListener("click",navigateToLoginPage);
+const discordBtn = document.getElementById("open_btn");
+
+discordBtn.addEventListener("click", navigateToLoginPage);

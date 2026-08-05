@@ -12,7 +12,7 @@ const btnText = document.querySelector(".btn-text");
 const loginButton = document.querySelector(".login-btn");
 
 if (isLoggedIn()) {
-  window.location.href = "dashboard.html";
+  window.location.href = "../dashboard.html";
 }
 
 function startLoading() {
@@ -114,14 +114,12 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
- 
   startLoading();
   try {
     const response = await apiRequest("/auth/login", "POST", {
       email: email.value.trim(),
       password: password.value,
     });
-
 
     stopLoading();
 
@@ -140,10 +138,9 @@ form.addEventListener("submit", async (e) => {
     showToast("success", "Login Successful", "Welcome back!");
 
     setTimeout(() => {
-      window.location.href = "dashboard.html";
+      window.location.href = "../dashboard.html";
     }, 1000);
   } catch (error) {
-
     stopLoading();
 
     showToast("error", "Connection Error", "Unable to connect to the server.");

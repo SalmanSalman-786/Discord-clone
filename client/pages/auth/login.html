@@ -18,8 +18,8 @@
 
         <div class="login-left">
           <div class="logo">
-            <img src="../../assets/images/logo.png" alt="Logo" />
-          </div>
+    <img src="../../assets/images/logo.png">
+</div>
 
           <h1>Welcome Back!</h1>
 
@@ -27,7 +27,7 @@
 
           <form id="loginForm">
             <div class="form-group">
-              <label for="email"> EMAIL </label>
+              <label for="email"> Email <span>*</span> </label>
 
               <input
                 type="email"
@@ -41,7 +41,7 @@
             </div>
 
             <div class="form-group">
-              <label for="password">PASSWORD</label>
+              <label for="password"> Password <span>*</span> </label>
 
               <div class="password-wrapper">
                 <input
@@ -76,9 +76,9 @@
           </form>
 
           <p class="register-text">
-            Need an account?
-
-            <a href="signup.html"> Register </a>
+    Need an account?
+    <a href="signup.html">Register</a>
+</p>
           </p>
         </div>
 
@@ -91,7 +91,10 @@
 
           <h2>Log in with QR Code</h2>
 
-          <p>Scan this with the mobile app to instantly log in.</p>
+          <p>
+            Scan this with the <strong>Discord mobile app</strong> to log in
+            instantly.
+          </p>
         </div>
       </section>
     </main>
@@ -107,14 +110,12 @@
       </div>
     </div>
 
-    <script src="../js/api.js"></script>
-    <script src="../js/auth.js"></script>
-    <script src="../js/toast.js"></script>
-    <script src="../js/validator.js"></script>
-
-    <script src="../js/password-toggle.js"></script>
-
-    <script src="../js/loading.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="../../js/route/api.js"></script>
+    <script src="../../js/auth/auth.js"></script>
+    <script src="../../js/toast.js"></script>
+    <script src="../../js/auth/validator.js"></script>
+    <script src="../../js/auth/password-toggle.js"></script>
+    <script src="../../js/auth/loading.js"></script>
+    <script src="../../js/auth/login.js"></script>
   </body>
 </html>
