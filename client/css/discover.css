@@ -1,0 +1,398 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#1e1f22;
+    color:white;
+}
+
+.discover-page{
+    display:flex;
+    min-height:100vh;
+}
+
+/* LEFT */
+
+.sidebar{
+
+    width:250px;
+    background:#111214;
+    padding:30px 20px;
+}
+
+.sidebar h2{
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+.sidebar nav{
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+}
+
+.sidebar a{
+
+    text-decoration:none;
+    color:#c7c7c7;
+    padding:14px 16px;
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    transition:.25s;
+
+}
+
+.sidebar a:hover{
+
+    background:#2b2d31;
+    color:white;
+    transform:translateX(6px);
+
+}
+
+.sidebar .active{
+
+    background:#2b2d31;
+    color:white;
+
+}
+
+/* MAIN */
+
+.content{
+
+    flex:1;
+    overflow:auto;
+
+}
+
+/* TOP */
+
+.top-nav{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 40px;
+
+    background:#202225;
+
+}
+
+.tabs{
+
+    display:flex;
+    gap:12px;
+
+}
+
+.tabs button{
+
+    border:none;
+    background:transparent;
+    color:#bdbdbd;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.tabs button:hover{
+
+    color:white;
+    background:#2f3136;
+
+}
+
+.tabs .active{
+
+    color:white;
+    background:#5865F2;
+
+}
+
+.top-nav input{
+
+    width:260px;
+
+    background:#111214;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:8px;
+
+}
+
+/* HERO */
+
+.hero{
+    height:220px;
+    padding:45px 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:linear-gradient(135deg,#3b4ca8,#25255d);
+}
+.hero h1{
+
+    font-size:62px;
+    line-height:70px;
+    font-weight:800;
+
+}
+
+.hero p{
+    margin-top:16px;
+    font-size:18px;
+    color:#c5cad3;
+    font-weight:500;
+}
+
+/* SECTION */
+
+section{
+
+    padding:40px;
+
+}
+
+section h2{
+
+    margin-bottom:20px;
+
+}
+
+/* GRID */
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+
+    gap:22px;
+
+}
+
+/* CARD */
+
+.card{
+
+    background:#2b2d31;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card img{
+
+    width:100%;
+    height:160px;
+
+    object-fit:cover;
+
+}
+
+.card-body{
+
+    padding:18px;
+
+}
+
+.card-body h3{
+
+    margin-bottom:8px;
+
+}
+
+.card-body p{
+
+    color:#b5bac1;
+
+}
+
+/* Hover Animation */
+
+.card:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.4);
+
+}
+
+.card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.card img{
+
+    transition:.4s;
+
+}
+
+/* Smooth */
+
+button,
+input,
+a{
+
+    transition:.3s;
+
+}
+.discover-card{
+
+    width:300px;
+    background:#232428;
+    border:1px solid #383a40;
+    border-radius:12px;
+    overflow:hidden;
+
+    transition:.25s ease;
+
+    cursor:pointer;
+
+}
+
+.discover-card:hover{
+
+    transform:translateY(-6px);
+    border-color:#5a5d65;
+    box-shadow:0 10px 25px rgba(0,0,0,.45);
+
+}
+
+.banner{
+
+    width:100%;
+    height:170px;
+
+    object-fit:cover;
+
+}
+
+.card-content{
+
+    padding:18px;
+
+    position:relative;
+
+}
+
+.icon{
+
+    width:52px;
+    height:52px;
+
+    border-radius:12px;
+
+    position:absolute;
+
+    top:-26px;
+
+    left:18px;
+
+    border:4px solid #232428;
+
+    background:white;
+
+}
+
+.discover-card h3{
+
+    margin-top:28px;
+
+    font-size:27px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.category{
+
+    margin-top:8px;
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.category span{
+
+    color:#9da1a9;
+
+}
+
+.description{
+
+    margin-top:12px;
+
+    color:#d5d7dc;
+
+    font-size:15px;
+
+    line-height:1.4;
+
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+
+}
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 16px;
+}
+
+.card-grid::-webkit-scrollbar{
+
+    display:none;
+
+}
+.discover-card:hover .banner{
+
+    transform:scale(1.03);
+
+}
+
+.banner{
+
+    transition:.35s ease;
+
+}
