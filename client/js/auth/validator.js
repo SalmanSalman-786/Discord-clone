@@ -1,4 +1,4 @@
-const Validator = {
+export const Validator = {
 
     isRequired(value) {
         return value.trim() !== "";

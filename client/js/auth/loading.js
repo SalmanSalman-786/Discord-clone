@@ -1,4 +1,4 @@
-function showLoading(message = "Please wait...") {
+export function showLoading(message = "Please wait...") {
 
     const overlay = document.getElementById("loadingOverlay");
 
@@ -10,7 +10,7 @@ function showLoading(message = "Please wait...") {
 
 }
 
-function hideLoading() {
+export function hideLoading() {
 
     const overlay = document.getElementById("loadingOverlay");
 
