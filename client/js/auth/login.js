@@ -1,6 +1,6 @@
 import { logos } from "../../assets/link/logos.js";
 import { saveTokens,isLoggedIn,getAccessToken,getRefreshToken,removeTokens} from "./auth.js";
-import { showLoading, hideLoading} from "./loading.js"; 
+import { showLoading, hideLoading} from "./loading.js";
 import { Validator } from "./validator.js";
 import { setupPasswordToggle } from "./password-toggle.js";
 
