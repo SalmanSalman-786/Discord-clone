@@ -3,6 +3,8 @@ import { saveTokens,isLoggedIn,getAccessToken,getRefreshToken,removeTokens} from
 import { showLoading, hideLoading} from "./loading.js";
 import { Validator } from "./validator.js";
 import { setupPasswordToggle } from "./password-toggle.js";
+import { loadCredentials,saveCredentials } from "../database/database.js";
+import { showToast } from "./toast.js";
 
 document.getElementById("favicon").href = logos.titleLogo;
 
@@ -105,40 +107,6 @@ password.addEventListener("input", () => {
 });
 
 form.addEventListener("submit", (e)=>{
-  // e.preventDefault();
-  // if (!validate()) {
-  //   return;
-  // }
-  // startLoading();
-  // try {
-  //   const response = await apiRequest("/auth/login", "POST", {
-  //     email: email.value.trim(),
-  //     password: password.value,
-  //   });
-  //   stopLoading();
-  //   if (!response.ok) {
-  //     showToast(
-  //       "error",
-  //       "Login Failed",
-  //       response.data.message || "Invalid email or password.",
-  //     );
-  //     return;
-  //   }
-
-  //   saveTokens(response.data.accessToken, response.data.refreshToken);
-
-  //   showToast("success", "Login Successful", "Welcome back!");
-
-  //   setTimeout(() => {
-  //     window.location.href = "../dashboard.html";
-  //   }, 1000);
-  // } catch (error) {
-  //   stopLoading();
-  //   showToast("error", "Connection Error", "Unable to connect to the server.");
-  //   console.error(error);
-  // }
-
-
   //TODO:dumb logic for dashboard routing ,Update to above code later
   e.preventDefault();
   if (!validate()) {
@@ -146,10 +114,18 @@ form.addEventListener("submit", (e)=>{
   }
   startLoading();
   setTimeout(() => {
-      if(email.value == localStorage.getItem("email") && password.value == localStorage.getItem("password")){
-    window.location.href ="../../pages/dashboard/dashboard.html";
-  }
-  stopLoading();
+      let credentials = loadCredentials();
+      for(let i=0;i<credentials.length;i++){
+        let knownUser = credentials[i];
+        console.log(knownUser);
+        if(knownUser.email == email.value && knownUser.password == password.value){
+          window.location.href ="../../pages/dashboard/dashboard.html";
+          stopLoading();
+          return;
+        }
+      }
+      stopLoading();
+      showToast("error", "Login Failed", "Incorrect email or password");
   }, 5000);//opens the dashboard after 5 seconds of btn click
 }
 );

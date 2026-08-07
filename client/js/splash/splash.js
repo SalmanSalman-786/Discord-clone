@@ -14,3 +14,4 @@ discordBtn.addEventListener("click", navigateToLoginPage);
 //TODO:Remove this dumb credential
 localStorage.setItem("email","abcd@gmail.com");
 localStorage.setItem("password","123456789");
+localStorage.setItem("credentials",{})
