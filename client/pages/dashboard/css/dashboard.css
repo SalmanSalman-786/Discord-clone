@@ -610,3 +610,20 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #2b2d31;
 }
+
+
+.settings-frame-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+}
+.settings-frame-overlay.open{
+  display: block;
+}
+.settings-frame-overlay iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}

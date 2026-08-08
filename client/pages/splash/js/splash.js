@@ -1,7 +1,7 @@
-import { logos } from "../../assets/link/logos.js";
+import { logos } from "../../../assets/link/logos.js";
 
 function navigateToLoginPage() {
-    window.location.href = "../auth/login.html";
+    window.location.href = "../../auth/ui/login.html";
 }
 
 const discordBtn = document.getElementById("open_btn");
@@ -11,7 +11,3 @@ document.getElementById("favicon").href = logos.titleLogo;
 discordBtn.addEventListener("click", navigateToLoginPage);
 
 
-//TODO:Remove this dumb credential
-localStorage.setItem("email","abcd@gmail.com");
-localStorage.setItem("password","123456789");
-localStorage.setItem("credentials",{})
