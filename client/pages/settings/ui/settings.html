@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Discord | Settings</title>
+<link rel="stylesheet" href="../css/settings.css" />
+<link id="favicon" rel="icon" type="image/png" href="" />
+</head>
+<body>
+
+
+<div class="backdrop" id="backdrop">
+  <div class="settings-shell" id="settingsCard">
+
+    <!-- LEFT NAV -->
+    <nav class="settings-nav">
+      <div class="nav-profile">
+        <div class="nav-avatar" id="navAvatar">U</div>
+        <div class="nav-profile-text">
+          <div class="nav-username" id="navUsername">username</div>
+          <div class="nav-edit-link">Edit Profiles ✎</div>
+        </div>
+      </div>
+
+      <input class="nav-search" type="text" placeholder="Search" />
+
+      <div class="nav-group">
+        <div class="nav-group-label">User Settings</div>
+        <div class="nav-item active">Account</div>
+        <div class="nav-item" style="padding-left:22px; font-size:14px;">Account Info</div>
+        <div class="nav-item" style="padding-left:22px; font-size:14px;">Password &amp; Security</div>
+        <div class="nav-item" style="padding-left:22px; font-size:14px;">Account Standing</div>
+        <div class="nav-item" style="padding-left:22px; font-size:14px;">Family Centre</div>
+        <div class="nav-item">Data &amp; Privacy</div>
+        <div class="nav-item">Messaging Permissions</div>
+        <div class="nav-item">Notifications</div>
+      </div>
+
+      <div class="nav-divider"></div>
+
+      <div class="nav-group">
+        <div class="nav-group-label">Billing</div>
+        <div class="nav-item discount-item">
+          <span>Nitro</span>
+          <span class="discount-badge">⏱ DISCOUNT</span>
+        </div>
+        <div class="nav-item">Server Boost</div>
+      </div>
+
+      <div class="nav-divider"></div>
+
+      <div class="nav-item logout" id="logoutBtn">Log Out</div>
+    </nav>
+
+    <!-- RIGHT CONTENT -->
+    <div class="settings-content">
+      <button class="close-btn" id="closeBtn" title="Close">✕</button>
+      <div class="settings-inner">
+        <h2 class="content-title">Account</h2>
+        <h3 class="section-title">Account Info</h3>
+
+        <div class="info-row">
+          <div>
+            <div class="info-label">Username</div>
+            <div class="info-value" id="valUsername">username</div>
+          </div>
+          <button class="btn-edit" data-field="username">Edit</button>
+        </div>
+
+        <div class="info-row">
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-value" id="emailWrap">
+              <span id="valEmail">you@example.com</span>
+              <span class="hide-link" id="toggleEmail">Hide</span>
+            </div>
+          </div>
+          <button class="btn-edit" data-field="email">Edit</button>
+        </div>
+
+        <div class="info-row">
+          <div>
+            <div class="info-label">Phone Number</div>
+            <div class="info-value placeholder">You haven't added a phone number yet.</div>
+          </div>
+          <button class="btn-edit" data-field="phone">Add</button>
+        </div>
+
+        <div class="section-divider"></div>
+        <h3 class="section-title">Password &amp; Security</h3>
+
+        <div class="info-row">
+          <div>
+            <div class="info-label">Password</div>
+            <div class="info-value placeholder">••••••••••••</div>
+          </div>
+          <button class="btn-edit" data-field="password">Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="../js/settings.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
-import { logos } from "../../assets/link/logos.js";
+import { logos } from "../../../assets/link/logos.js";
 import { showLoading } from "./loading.js";
 import { showToast } from "./toast.js";
-import { loadCredentials,saveCredentials } from "../database/database.js";
+import { loadCredentials,saveCredentials } from "../../../js/database/database.js";
 
 
 document.getElementById("favicon").href = logos.titleLogo;

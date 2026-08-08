@@ -1,9 +1,9 @@
-import { logos } from "../../assets/link/logos.js";
+import { logos } from "../../../assets/link/logos.js";
 import { saveTokens,isLoggedIn,getAccessToken,getRefreshToken,removeTokens} from "./auth.js";
 import { showLoading, hideLoading} from "./loading.js";
 import { Validator } from "./validator.js";
 import { setupPasswordToggle } from "./password-toggle.js";
-import { loadCredentials,saveCredentials } from "../database/database.js";
+import { loadCredentials,saveCredentials } from "../../../js/database/database.js";
 import { showToast } from "./toast.js";
 
 document.getElementById("favicon").href = logos.titleLogo;
@@ -119,7 +119,8 @@ form.addEventListener("submit", (e)=>{
         let knownUser = credentials[i];
         console.log(knownUser);
         if(knownUser.email == email.value && knownUser.password == password.value){
-          window.location.href ="../../pages/dashboard/dashboard.html";
+          localStorage.setItem("currentUser",JSON.stringify(knownUser));
+          window.location.href ="../../dashboard/ui/dashboard.html";
           stopLoading();
           return;
         }
