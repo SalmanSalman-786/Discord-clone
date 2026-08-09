@@ -19,9 +19,16 @@ const mainScreen = document.getElementById("mainScreen");
 mainScreen.src = "../../direct_message/ui/dm_mainscreen.html";
 
 
+
 document.getElementById("discoverBtn").addEventListener("click", () => {
-    window.location.href = "../../discover/ui/discover_app.html";
+    sidebar.src = "../../discover/ui/discover_app_sidebar.html";
+    mainScreen.src ="../../discover/ui/discover_app_mainScreen.html";
 });
+
+document.getElementById("dm").addEventListener("click",()=>{
+    sidebar.src="../../direct_message/ui/dm_sidebar.html"
+    mainScreen.src = "../../direct_message/ui/dm_mainscreen.html";
+})
 
 document.querySelectorAll(".server").forEach((server) => {
     server.addEventListener("click", () => {
