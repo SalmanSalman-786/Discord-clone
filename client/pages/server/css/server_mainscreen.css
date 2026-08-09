@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "gg sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #313338;
+  color: #dbdee1;
+}
+
+.main-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Top bar */
+.channel-topbar {
+  height: 48px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.channel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #f2f3f5;
+}
+
+.channel-title svg {
+  color: #949ba4;
+}
+
+.topbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-icons button {
+  background: none;
+  border: none;
+  color: #b5bac1;
+  cursor: pointer;
+  display: flex;
+}
+
+.topbar-icons button:hover {
+  color: #dbdee1;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #1e1f22;
+  border-radius: 4px;
+  padding: 0 6px;
+  height: 24px;
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #dbdee1;
+  font-size: 13px;
+  width: 100px;
+}
+
+.search-box svg {
+  color: #949ba4;
+}
+
+/* Message area */
+.message-area {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.message-area::-webkit-scrollbar {
+  width: 8px;
+}
+.message-area::-webkit-scrollbar-thumb {
+  background-color: #1a1b1e;
+  border-radius: 4px;
+}
+
+.channel-welcome {
+  padding: 16px 16px 24px 16px;
+}
+
+.welcome-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 2px solid #80848e;
+  color: #80848e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.channel-welcome h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f2f3f5;
+  margin-bottom: 8px;
+}
+
+.channel-welcome p {
+  font-size: 16px;
+  color: #949ba4;
+}
+
+/* Composer */
+.composer-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 16px 24px 16px;
+  padding: 0 16px;
+  background-color: #383a40;
+  border-radius: 8px;
+  min-height: 44px;
+}
+
+.composer-icon-btn {
+  background: none;
+  border: none;
+  color: #b5bac1;
+  cursor: pointer;
+  display: flex;
+}
+
+.composer-icon-btn:hover {
+  color: #dbdee1;
+}
+
+#messageInput {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #dbdee1;
+  font-size: 15px;
+  padding: 11px 0;
+}
+
+.composer-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.composer-right-icons button {
+  background: none;
+  border: none;
+  color: #b5bac1;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.composer-right-icons button:hover {
+  color: #dbdee1;
+}

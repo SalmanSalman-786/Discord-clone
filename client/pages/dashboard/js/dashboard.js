@@ -30,6 +30,11 @@ document.getElementById("dm").addEventListener("click",()=>{
     mainScreen.src = "../../direct_message/ui/dm_mainscreen.html";
 })
 
+document.getElementById("channelBtn").addEventListener("click",()=>{
+    sidebar.src="../../server/ui/server_sidebar.html"
+    mainScreen.src = "../../server/ui/server_mainscreen.html";
+})
+
 document.querySelectorAll(".server").forEach((server) => {
     server.addEventListener("click", () => {
         document
