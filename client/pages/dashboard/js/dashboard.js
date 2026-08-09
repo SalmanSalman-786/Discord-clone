@@ -12,9 +12,15 @@ user_name.innerHTML= currentUser.name;
 const user_letter = document.getElementById("avatar-letter");
 user_letter.innerHTML = currentUser.name.charAt(0).toUpperCase();
 
+const sidebar = document.getElementById("sidebar");
+sidebar.src="../../direct_message/ui/dm_sidebar.html"
+
+const mainScreen = document.getElementById("mainScreen");
+mainScreen.src = "../../direct_message/ui/dm_mainscreen.html";
+
 
 document.getElementById("discoverBtn").addEventListener("click", () => {
-    window.location.href = "../discover/discover_app.html";
+    window.location.href = "../../discover/ui/discover_app.html";
 });
 
 document.querySelectorAll(".server").forEach((server) => {

@@ -22,6 +22,13 @@ const loginButton = document.querySelector(".login-btn");
 //   window.location.href = "../dashboard.html";
 // }
 
+const registerLink = document.querySelector("#registerLink");
+
+registerLink.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.location.replace("signup.html");
+});
+
 function startLoading() {
   loginButton.disabled = true;
   loader.classList.remove("hidden");

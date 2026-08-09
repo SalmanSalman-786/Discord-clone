@@ -12,8 +12,8 @@
   </head>
 
   <body>
-    <div class="app">
-      <!-- SERVER SIDEBAR -->
+    <div class="app" style="display: flex; height: 100vh; padding:0px 10px">
+
       <div class="sidebar">
         <div class="server active" data-name="Direct Messages">
           <span class="active-indicator"></span>
@@ -44,90 +44,12 @@
           </svg>
         </div>
       </div>
+  
+      <div style="display: flex; flex-direction: column; height: 100vh;  position: relative;">
 
-      <!-- LEFT PANEL (DM Navigation) -->
-      <div class="left-panel">
-        <div class="search-container">
-          <button class="search-btn">Find or start a conversation</button>
-        </div>
+        <iframe id="sidebar" style="flex: 1; border:none ;"></iframe>
 
-        <div class="menu">
-          <div class="menu-item active">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-              />
-            </svg>
-            <span>Friends</span>
-          </div>
-          <div class="menu-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-10-5V17l10 5 10-5v-8.5l-10 5z"
-              />
-            </svg>
-            <span>Nitro</span>
-          </div>
-          <div class="menu-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M19 6h-2c0-2.21-1.79-4-4-4S9 3.79 9 6H7c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2z"
-              />
-            </svg>
-            <span>Shop</span>
-          </div>
-          <div class="menu-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
-              />
-            </svg>
-            <span>Quests</span>
-          </div>
-        </div>
-
-        <div class="dm-section">
-          <div class="dm-header">
-            <span>DIRECT MESSAGES</span>
-            <span class="plus">+</span>
-          </div>
-          <div class="dm-list">
-            <div class="dm-item">
-              <div class="avatar-wrapper">
-                <div class="avatar green">A</div>
-                <div class="status-indicator online"></div>
-              </div>
-              <div class="dm-details">
-                <span class="dm-name">myfriend</span>
-              </div>
-            </div>
-            <div class="dm-item active">
-              <div class="avatar-wrapper">
-                <div class="avatar blurple">
-                  <svg
-                    width="16"
-                    height="12"
-                    viewBox="0 0 127.14 96.36"
-                    fill="white"
-                  >
-                    <path
-                      d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2 20.8 12.08 43.8 12.08 64.38 0 .87.68 1.76 1.36 2.67 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.91-72.14z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="dm-details">
-                <div class="dm-title-row">
-                  <span class="dm-name">Discord</span>
-                  <span class="official-tag">SYSTEM</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- USER FOOTER -->
-        <div id="user-card" class="user-footer">
+        <div id="user-card" class="user-footer" style="border-radius: 10px;">
           <div class="user-avatar">
             <div id="avatar-letter" class="avatar orange">U</div>
             <div class="status-indicator online"></div>
@@ -177,157 +99,18 @@
               </svg>
             </button>
           </div>
-        </div>
+          
+          </div>
       </div>
+      
+      <iframe id="mainScreen" style="flex: 1; height: 100% ;width: 100%; border: none"></iframe>
 
-      <!-- MAIN VIEW AREA -->
-      <div class="main-container">
-        <!-- TOP BAR -->
-        <div class="top-bar">
-          <div class="top-bar-left">
-            <div class="title-section">
-              <svg
-                class="header-icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-                />
-              </svg>
-              <h2>Friends</h2>
-            </div>
-            <div class="divider"></div>
-            <div class="tabs">
-              <span class="tab active">Online</span>
-              <span class="tab">All</span>
-              <button class="add-friend-btn">Add Friend</button>
-            </div>
-          </div>
-
-          <div class="top-bar-right">
-            <button class="icon-btn" title="New Group DM">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9 0c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm9 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V18h6v-2c0-2.66-5.33-4-8-4z"
-                />
-              </svg>
-            </button>
-            <div class="divider"></div>
-            <button class="icon-btn" title="Inbox">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5v-3h3.56c.69 1.19 1.97 2 3.44 2s2.75-.81 3.44-2H19v3zm0-5h-4.18c-.41 1.16-1.51 2-2.82 2s-2.41-.84-2.82-2H5V5h14v9z"
-                />
-              </svg>
-            </button>
-            <button class="icon-btn" title="Help">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 11.9 12 12.5 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- CENTER CONTENT AND ACTIVE NOW PANEL -->
-        <div class="content-body">
-          <div class="friends-column">
-            <div class="search-bar-wrapper">
-              <input type="text" placeholder="Search" />
-              <svg
-                class="search-icon"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                />
-              </svg>
-            </div>
-
-            <div class="friends-list-header">ONLINE — 1</div>
-
-            <div class="friends-list">
-              <div class="friend-row">
-                <div class="friend-info">
-                  <div class="avatar-wrapper">
-                    <div class="avatar green">A</div>
-                    <div class="status-indicator online"></div>
-                  </div>
-                  <div class="friend-details">
-                    <span class="friend-name">myfriend</span>
-                    <span class="friend-status">Online</span>
-                  </div>
-                </div>
-                <div class="friend-actions">
-                  <button class="action-btn" title="Message">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"
-                      />
-                    </svg>
-                  </button>
-                  <button class="action-btn" title="More">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- RIGHT PANEL (Active Now) -->
-          <div class="active-now-panel">
-            <h3>Active Now</h3>
-            <div class="active-now-card">
-              <h4>It's quiet for now...</h4>
-              <p>
-                When a friend starts an activity—like playing a game or hanging
-                out on voice—we'll show it here!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    
-<div class="settings-frame-overlay" id="settingsFrameOverlay">
-  <iframe id="settingsFrame" src="" title="Settings"></iframe>
-</div>
+      <div class="settings-frame-overlay" id="settingsFrameOverlay">
+      <iframe id="settingsFrame" src="" title="Settings"></iframe>
+    </div>
+  
+
   </body>
 
 </html>

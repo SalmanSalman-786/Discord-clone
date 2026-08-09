@@ -38,6 +38,6 @@ submitBtn.addEventListener("click", (e) => {
         };
         saveCredentials(newUser);
         console.log(newUser);
-        window.history.back();
+        window.location.replace("../ui/login.html");
     }, 5000);
 });

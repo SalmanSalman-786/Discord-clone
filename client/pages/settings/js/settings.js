@@ -38,11 +38,10 @@ toggleEmail.addEventListener("click", () => {
   render();
 });
 
-// where "close" should send the user back to — adjust to your real dashboard path
+
 const DASHBOARD_PATH = "../../dashboard/ui/dashboard.html";
 
 function goBackToDashboard(){
-  // we're inside dashboard's iframe — ask the parent to close us
   window.parent.postMessage("closeSettings", "*");
 }
 
