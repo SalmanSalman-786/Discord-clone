@@ -7,9 +7,11 @@ const SERVERS_KEY = "discord_clone_servers";
 const ACTIVE_SERVER_KEY = "discord_clone_active_server";
 const ACTIVE_CHANNEL_KEY = "discord_clone_active_channel";
 
+// The default channel layout every new server gets, matching your screenshot:
+// Events (standalone), Information category, Text Channels category, Voice Channels category.
 function defaultChannelTemplate() {
   return {
-    events: true, 
+    events: true, // shows the standalone "Events" row
     categories: [
       {
         id: "information",
@@ -58,14 +60,17 @@ export function getServerById(id) {
   return getServers().find((s) => s.id === id) || null;
 }
 
-// Call this from your "Create" button on the "Customise Your Server" popup.
-// name -> the Server Name input value. iconDataUrl -> optional uploaded image (base64/dataURL).
-export function createServer(name, iconDataUrl = null) {
+// Call this from your "Create" button in create_server_modal.js, passing
+// everything collected across all 3 steps:
+//   { template, audience, name, icon }
+export function createServer({ template = null, audience = null, name = "", icon = null } = {}) {
   const servers = getServers();
   const newServer = {
     id: "srv_" + Date.now(),
-    name: name.trim() || "New Server",
-    icon: iconDataUrl, // null -> sidebar falls back to initials bubble
+    name: (name || "").trim() || "New Server",
+    icon,          // dataURL or null -> sidebar falls back to initials bubble
+    template,       // which template card the user picked in step 1
+    audience,       // "friends" | "community" | null (skipped) from step 2
     createdAt: Date.now(),
     channels: defaultChannelTemplate(),
   };

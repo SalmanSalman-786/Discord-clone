@@ -628,6 +628,7 @@ body {
 .settings-frame-overlay.open{
   display: block;
 }
+
 .settings-frame-overlay iframe{
   width: 100%;
   height: 100%;
